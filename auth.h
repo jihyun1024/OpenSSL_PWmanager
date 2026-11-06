@@ -12,11 +12,11 @@ int auth_user_exists(void);
 
 /* Add an account containing the username, SHA-256 password hash, and TOTP secret. */
 int auth_register(const char *username, const char *master_password,
-                  const char *totp_secret);
+                  const char *totp_secret);
 
 /* Verify a username and master password; copy that user's TOTP secret on success. */
 int auth_verify_master(const char *username, const char *master_password,
-                       char *totp_secret, size_t secret_size);
+                       char *totp_secret, size_t secret_size);
 
 #endif
 
